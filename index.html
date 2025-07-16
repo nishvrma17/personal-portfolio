@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nishtha Verma Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-padding-top: 80px;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: #fff;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    header h2 {
+      animation: slideInLeft 2s;
+    }
+    header nav a {
+      margin: 0 1em;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.7s, transform 0.7s;
+      font-weight: bold;
+    }
+    header nav a:hover {
+      color: #222;
+      transform: scale(1.1);
+    }
+    @keyframes slideInLeft {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    section {
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 2s forwards;
+      margin: 3em 1em;
+    }
+    section:nth-child(even) { animation-delay: 0.3s; }
+    section:nth-child(odd) { animation-delay: 0.6s; }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      background: #fff5f7;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      padding: 3em;
+      box-shadow: 0 8px 20px rgba(255, 117, 140, 0.2);
+    }
+    .intro img {
+      width: 250px;
+      border-radius: 15px;
+      margin: 1em;
+      object-fit: cover;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      animation: bounceIn 1s;
+      transition: transform 0.4s ease;
+    }
+    .intro img:hover {
+      transform: scale(1.1);
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .intro-text {
+      max-width: 600px;
+      margin: 1em;
+      text-align: left;
+    }
+    .intro-text h1 {
+      font-size: 2.2em;
+      margin-bottom: 0.5em;
+      color: #ff5f6d;
+    }
+    .intro-text .typewriter {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #f96dac;
+      margin-top: 10px;
+      height: 30px;
+      overflow: hidden;
+    }
+    .certificates, .projects, .contact {
+      padding: 2em;
+      background-color: #ffffff;
+      margin: 1em auto;
+      border-radius: 15px;
+      max-width: 1100px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    }
+    .certificates a {
+      text-decoration: none;
+      color: #f975c6;
+      font-weight: bold;
+    }
+    .certificates a:hover {
+      color: #e14696;
+    }
+    .projects-container {
+      display: flex;
+      gap: 3em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .project {
+      max-width: 400px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background: linear-gradient(to top left, #fdfbfb, #ebedee);
+      padding: 1.5em;
+      border-radius: 15px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    }
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1em;
+      border: 2px solid #ccc;
+    }
+    .project h3 {
+      color: #ff5f6d;
+    }
+    .project p {
+      font-size: 0.95em;
+      color: #555;
+    }
+    .contact a {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8em;
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .contact a:hover {
+      color: #eb44ab;
+    }
+    .contact a img {
+      width: 24px;
+      margin-right: 10px;
+    }
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+      .projects-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Nishtha Verma</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about" class="intro">
+    <img src="nishtha.jpg" alt="Nishtha Verma" />
+    <div class="intro-text">
+      <h1>Hello There, I'm Nishtha Verma.</h1>
+      <p>A 3rd year Computer Science diploma student</p>
+      <p>I am passionate about front-end development and building creative, responsive websites. My work reflects a keen eye for design, accessibility, and performance. Constantly exploring new tools and techniques to grow and adapt in this ever-evolving field.</p>
+      <div class="typewriter" id="typewriter"></div>
+    </div>
+  </section>
+
+  <section id="certificates" class="certificates">
+    <h2>Certificates</h2>
+    <a href="https://www.freecodecamp.org/certification/nishthaverma/foundational-c-sharp-with-microsoft" target="_blank">
+      Foundational C# with Microsoft - FreeCodeCamp
+    </a>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project">
+        <h3>Recipe Management System</h3>
+        <a href="https://github.com/nishvrma17/recipe-management-system" target="_blank">
+          <img src="recipe.png" alt="Recipe Management Screenshot">
+        </a>
+        <p>A responsive web app to add, search, and manage recipes categorized by type. Users can input ingredients and instructions, filter recipes, and enjoy a clean, intuitive UI.</p>
+      </div>
+      <div class="project">
+        <h3>Event Management System</h3>
+        <a href="https://github.com/nishvrma17/event-management-sytem" target="_blank">
+          <img src="event.png" alt="Event Management Screenshot">
+        </a>
+        <p>A static HTML/CSS website to showcase and book events. Includes featured events, services provided, and a booking section. Clean layout and easy navigation for users.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Open to internship opportunities in front-end development. Let’s get in touch.</p>
+    <a href="mailto:vnishtha177@gmail.com">
+      <img src="https://img.icons8.com/color/48/000000/gmail-new.png" alt="Gmail"> vnishtha177@gmail.com
+    </a>
+    <a href="https://wa.me/9311650513">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp"> 9311650513
+    </a>
+    <a href="https://www.linkedin.com/in/nishtha-verma-1619ba2a6/">
+      <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"> LinkedIn Profile
+    </a>
+  </section>
+
+  <script>
+    const typewriterElement = document.getElementById('typewriter');
+    const texts = ["Web Development", "Front-End Development", "C Developer"];
+    let textIndex = 0;
+    let charIndex = 0;
+    let typing = true;
+
+    function typeEffect() {
+      const currentText = texts[textIndex];
+
+      if (typing) {
+        typewriterElement.textContent = currentText.slice(0, ++charIndex);
+        if (charIndex === currentText.length) {
+          typing = false;
+          setTimeout(typeEffect, 1500);
+        } else {
+          setTimeout(typeEffect, 100);
+        }
+      } else {
+        typewriterElement.textContent = currentText.slice(0, --charIndex);
+        if (charIndex === 0) {
+          typing = true;
+          textIndex = (textIndex + 1) % texts.length;
+        }
+        setTimeout(typeEffect, 50);
+      }
+    }
+
+    window.onload = typeEffect;
+  </script>
+</body>
+</html>
